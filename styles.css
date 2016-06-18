@@ -1,0 +1,141 @@
+@keyframes nodeInserted {  
+	from { opacity: 0.99; }
+	to { opacity: 1; }  
+}
+
+#river-container-2 > #river-container,
+#river-container-3 > #river-container {
+	  animation-duration: 0.001s;
+    animation-name: nodeInserted;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.clownzano-img {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  right: 0;
+  z-index: 2001;
+  transition: all 0.5s ease;
+}
+
+.clownzano-img.clownzano-md-open {
+  opacity: 1;
+  right: -147px;
+}
+
+.clownzano-modal {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #fff;
+  font-size: 120%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 560px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.clownzano-show {
+	visibility: visible;
+}
+
+.clownzano-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(51,102,204, 0.9);
+	transition: all 0.3s;
+}
+
+.clownzano-show ~ .clownzano-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+.clownzano-content {
+	color: #fff;
+	background: #3366CC;
+	position: relative;
+	border: solid 3px rgba(0, 0, 0, 0.0980392);
+	border-radius: 3px;
+	margin: 0 auto;
+	transform: scale(0.7);
+	opacity: 0;
+	transition: all 0.3s;
+  z-index: 2002;
+}
+
+.clownzano-content ul {
+  list-style-type: none;
+}
+
+.clownzano-content ul li {
+  margin-bottom: 15px;
+}
+
+.clownzano-content h3 {
+  color: #feff43;
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: bold;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.clownzano-content > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+.clownzano-content > div p {
+	margin: 0;
+	padding: 10px 0;
+  text-align: center;
+}
+
+.clownzano-content button {
+	border: none;
+	padding: 0.6em 1.2em;
+	background: #2952a3;
+	color: #feff43;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 2px;
+  outline: none;
+	display: block;
+	font-size: 1em;
+  float: left;
+  margin-right: 15px;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+
+.clownzano-content button:hover {
+  background: #1f3e7a;
+}
+
+.clownzano-show .clownzano-content {
+	transform: scale(1);
+	opacity: 1;
+}
